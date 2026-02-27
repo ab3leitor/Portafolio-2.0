@@ -1,82 +1,95 @@
-TAPICERO DE CONFIANZA - SITIO WEB OFICIAL
+MI PORTAFOLIO | DESARROLLADOR WEB - SITIO WEB OFICIAL
 
-[Imagen de portada: Images/271b2cf1-2c5e-4941-b117-f4766eccf840.webp]
+[Imagen de portada: Image/shazam.png (representativa)]
 
-Sitio web profesional para Tapicero de Confianza, un taller de tapicería artesanal de lujo ubicado en La Reina, Santiago. Especialistas en restauración y diseño de muebles con materiales premium, ofreciendo servicios tanto residenciales como comerciales.
+Sitio web de portafolio profesional para desarrollador full stack, diseñado para mostrar habilidades técnicas, proyectos realizados y facilitar el contacto con potenciales clientes o empleadores. Incluye secciones informativas, una interfaz moderna y elementos interactivos como música de fondo y animaciones.
 
 DESCRIPCIÓN
 
-Este proyecto consiste en una página web estática de una sola página (landing page) diseñada para mostrar la calidad artesanal y la experiencia del taller. Incluye secciones de servicios, galería de proyectos, testimonios de clientes y un formulario de contacto funcional. El diseño es elegante, con una paleta de colores oscuros y dorados que transmite lujo y sofisticación.
+Este proyecto es una página web estática de una sola página (landing page) que funciona como portafolio personal. Presenta al desarrollador, sus competencias técnicas, las herramientas que utiliza, una galería de proyectos destacados y un formulario de contacto con validación. El diseño es oscuro con acentos en azul y naranja, y está completamente optimizado para dispositivos móviles.
 
 CARACTERÍSTICAS
 
-- Diseño responsive adaptable a dispositivos móviles, tablets y desktop.
-- Navegación suave con barra de navegación fija.
-- Galería interactiva con imágenes de proyectos realizados.
-- Testimonios de clientes destacando la calidad del trabajo.
-- Formulario de contacto funcional mediante FormSubmit.co (sin necesidad de backend propio).
-- Optimización de rendimiento: carga diferida de imágenes y fuentes, y minificación de CSS/JS.
-- Integración con redes sociales (Instagram y WhatsApp).
-- Enlaces rápidos a proyectos por categoría.
+- Diseño responsive adaptable a móviles, tablets y desktop.
+- Barra de navegación fija con iconos de Bootstrap Icons.
+- Sección "Sobre mí" con una tarjeta giratoria (flip card) que muestra información adicional y un enlace de descarga de CV.
+- Música de fondo con controles de volumen y mute (ocultables).
+- Sección de habilidades técnicas con barras de progreso y porcentajes visuales.
+- Sección de herramientas con tarjetas descriptivas.
+- Carrusel de proyectos con imágenes y enlaces.
+- Formulario de contacto con validación en JavaScript, campos obligatorios y selector de asunto.
+- Checkbox de términos y condiciones que abre un modal (aunque el modal no está definido en el HTML, pero se menciona el enlace).
+- Pie de página con enlaces a redes sociales (Facebook, Twitter, LinkedIn, GitHub).
 
 TECNOLOGÍAS UTILIZADAS
 
 - HTML5 - Estructura semántica.
-- CSS3 - Estilos personalizados y diseño responsive.
+- CSS3 - Estilos personalizados (archivos indexStyle.css y validacion.css).
 - Bootstrap 5 - Framework CSS para componentes y grid.
-- JavaScript - Interactividad y envío del formulario.
-- Font Awesome 6 - Iconos vectoriales.
-- Google Fonts - Tipografías Playfair Display y Montserrat.
-- FormSubmit - Servicio para el envío de formularios sin backend.
+- Bootstrap Icons - Iconos vectoriales.
+- JavaScript - Validación de formulario, control de música, efectos de scroll y carrusel.
+- Audio HTML5 - Reproducción de música de fondo.
 
 ESTRUCTURA DE ARCHIVOS
 
 /
-├── index.html               # Página principal
+├── index.html                           # Página principal
 ├── css/
-│   └── style.min.css        # Estilos personalizados minificados
+│   ├── indexStyle.css                    # Estilos principales
+│   └── validacion.css                     # Estilos para validación de formulario
 ├── js/
-│   └── navScroll.min.js     # Script para el cambio de color del navbar al hacer scroll
-├── Images/                  # Carpeta con todas las imágenes del sitio
-│   ├── 271b2cf1-2c5e-4941-b117-f4766eccf840.webp
-│   ├── azulamity-1.webp
-│   ├── SillonCuero.webp
-│   └── ... (más imágenes)
-└── README.txt               # Este archivo
+│   ├── validacion.js                      # Validación del formulario de contacto
+│   ├── navScroll.js                        # Cambio de clase en navbar al hacer scroll
+│   ├── musicaFondo.js                      # Control de música de fondo
+│   └── carrousel.js                         # Configuración del carrusel (opcional, puede estar en línea)
+├── Images/                                 # Carpeta de imágenes
+│   ├── ChatGPT Image 4 abr 2025, 17_29_47.png  # Foto de perfil
+│   ├── shazam.png                               # Imagen proyecto 1
+│   ├── spotify.png                              # Imagen proyecto 2
+│   └── youtube.png                              # Imagen proyecto 3
+├── music/
+│   └── musicFondo.mp3                          # Música de fondo
+├── assets/
+│   └── favicon.png                             # Favicon
+└── README.txt                                   # Este archivo
 
 INSTALACIÓN Y USO
 
 1. Clonar el repositorio (si está disponible):
-   git clone https://github.com/tuusuario/tapicero-de-confianza.git
+   git clone https://github.com/tuusuario/mi-portafolio.git
 
 2. Abrir el archivo index.html en cualquier navegador web moderno.
 
-3. Para desarrollo: se recomienda usar un servidor local (como Live Server de VS Code) para evitar problemas de CORS con las fuentes y scripts externos.
+3. Para desarrollo: se recomienda usar un servidor local (como Live Server de VS Code) para evitar problemas de CORS con los archivos de audio y scripts.
 
 PERSONALIZACIÓN
 
 - Cambiar imágenes: Reemplaza los archivos en la carpeta Images/ manteniendo los mismos nombres o actualiza las rutas en el HTML.
-- Modificar estilos: Edita el archivo css/style.min.css (o la versión sin minificar si existe).
-- Actualizar información de contacto: Modifica el teléfono, correo y dirección en la sección de contacto y en el formulario.
-- Redes sociales: Cambia los enlaces de Instagram y WhatsApp en la sección de contacto y en el pie de página.
+- Modificar estilos: Edita los archivos CSS en la carpeta css/.
+- Actualizar información personal: Modifica los textos en las secciones "Sobre mí", habilidades, herramientas y proyectos.
+- Cambiar música de fondo: Reemplaza music/musicFondo.mp3 por otro archivo de audio.
+- Redes sociales: Actualiza los enlaces en el footer con tus perfiles.
+- CV: Cambia la ruta del archivo "tu-cv.pdf" en el botón de descarga de la flip card.
 
 CAPTURAS DE PANTALLA
 
 | Vista Desktop | Vista Móvil |
 |---------------|-------------|
-| [Imagen de portada] | (Agrega aquí una captura móvil) |
+| [Inserta aquí una captura del hero] | [Inserta aquí una captura móvil] |
 
 CONTACTO
 
-Para consultas o trabajos personalizados, puedes contactar a través de:
+Para consultas o colaboraciones, puedes utilizar el formulario de contacto en la sección #contacto o escribir a través de las redes sociales:
 
-- Correo: tapicerodeconfianza@gmail.com
-- WhatsApp: +56 9 56025318 (https://wa.me/56956025318)
-- Instagram: @tapicerodeconfianza (https://www.instagram.com/tapicerodeconfianza/)
-- Dirección: Calle Hualqui 635, Villa La Reina, 4180000, La Reina, Santiago.
+- Facebook: https://www.facebook.com/abel.arriagadaurriola/
+- GitHub: https://github.com/ab3leitor
+- Twitter: (enlace pendiente de actualizar)
+- LinkedIn: (enlace pendiente de actualizar)
+
+También puedes enviar un correo electrónico mediante el formulario (la funcionalidad de envío real no está implementada; solo validación).
 
 LICENCIA
 
-Este proyecto es de propiedad de Tapicero de Confianza. Todos los derechos reservados. No se permite su uso comercial sin autorización previa.
+Este proyecto es de propiedad del desarrollador. Todos los derechos reservados. No se permite su uso comercial sin autorización previa.
 
---- Hecho con ❤️ para resaltar la artesanía en tapicería. ---
+--- Hecho con ❤️ para mostrar el camino en el desarrollo web. ---
