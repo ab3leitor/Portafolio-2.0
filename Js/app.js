@@ -87,10 +87,10 @@ document.addEventListener('DOMContentLoaded', () => {
     field.setAttribute('aria-invalid', Boolean(message));
     return !message;
   };
-  form.querySelectorAll('input, textarea').forEach(field => field.addEventListener('blur', () => validateField(field)));
+  form.querySelectorAll('input, textarea, select').forEach(field => field.addEventListener('blur', () => validateField(field)));
   form.addEventListener('submit', event => {
     event.preventDefault();
-    const fields = [...form.querySelectorAll('input, textarea')];
+    const fields = [...form.querySelectorAll('input, textarea, select')];
     const results = fields.map(validateField);
     if (!results.every(Boolean)) {
       showToast('Revisa los campos marcados.');
@@ -98,8 +98,11 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
     const data = new FormData(form);
-    const subject = encodeURIComponent(`Consulta de ${data.get('nombre')} desde el portafolio`);
-    const body = encodeURIComponent(`Hola Abel,\n\n${data.get('mensaje')}\n\nContacto: ${data.get('email')}`);
+    const servicio = data.get('servicio');
+    const presupuesto = data.get('presupuesto');
+    const subject = encodeURIComponent(`${servicio ? 'Cotizacion' : 'Consulta'} de ${data.get('nombre')} desde el portafolio`);
+    const details = [servicio && `Servicio: ${servicio}`, presupuesto && `Presupuesto: ${presupuesto}`].filter(Boolean).join('\n');
+    const body = encodeURIComponent(`Hola Abel,\n\n${details ? `${details}\n\n` : ''}${data.get('mensaje')}\n\nContacto: ${data.get('email')}`);
     showToast('Abriendo tu aplicación de correo…');
     setTimeout(() => location.href = `mailto:?subject=${subject}&body=${body}`, 450);
   });
