@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07111f">
+  <meta name="description" content="Galeria de proyectos principales de Abel Arriagada: landing pages, web apps, UI design y fullstack.">
+  <title>Galeria | Abel Arriagada</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/indexStyle.css">
+  <link rel="stylesheet" href="css/galeria.css">
+  <script src="Js/galeria.js" defer></script>
+</head>
+<body class="gallery-page">
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <nav class="site-nav" aria-label="Navegacion principal">
+    <a class="brand" href="index.html#inicio" aria-label="Volver al inicio"><span>&lt;</span>AA<span>/&gt;</span></a>
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"><i class="bi bi-list"></i></button>
+    <div class="nav-links">
+      <a href="index.html">Portafolio</a>
+      <a href="index.html#habilidades">Stack</a>
+      <a href="galeria.html" aria-current="page">Galeria</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="index.html#contacto" class="nav-cta">Hablemos <i class="bi bi-arrow-up-right"></i></a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="gallery-hero">
+      <div class="gallery-hero-grid">
+        <div class="gallery-intro">
+          <p class="eyebrow reveal"><span class="status-dot"></span> Mis proyectos</p>
+          <h1 class="reveal">Galeria de proyectos principales.</h1>
+          <p class="reveal">Una seleccion de repositorios reales publicados en GitHub, convertidos en una experiencia visual con filtros, movimiento y cards interactivas.</p>
+        </div>
+        <article class="featured-project reveal" data-category="landing">
+          <a class="featured-media" href="https://github.com/ab3leitor/GreenMedical" target="_blank" rel="noreferrer" aria-label="Ver repositorio GreenMedical">
+            <img src="Image/gallery/greenmedical.png" alt="Pantallazo del proyecto GreenMedical">
+            <span>Proyecto destacado grande</span>
+          </a>
+          <div class="featured-copy">
+            <div>
+              <p>Landing Pages / UI Design</p>
+              <h2>GreenMedical</h2>
+              <p>Landing corporativa para una marca medica, con narrativa visual limpia, secciones comerciales y presencia digital confiable.</p>
+            </div>
+            <a class="button button-primary magnetic" href="https://github.com/ab3leitor/GreenMedical" target="_blank" rel="noreferrer">Ver repositorio <i class="bi bi-github"></i></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section gallery-section" aria-labelledby="gallery-title">
+      <div class="gallery-top reveal">
+        <div>
+          <div class="section-label"><span>01</span> Mis proyectos</div>
+          <h2 id="gallery-title">Explora por categoria.</h2>
+        </div>
+        <div class="gallery-filters" role="tablist" aria-label="Filtrar proyectos">
+          <button class="filter-button active" type="button" data-filter="all" role="tab" aria-selected="true">Todos</button>
+          <button class="filter-button" type="button" data-filter="landing" role="tab" aria-selected="false">Landing Pages</button>
+          <button class="filter-button" type="button" data-filter="webapp" role="tab" aria-selected="false">Web Apps</button>
+          <button class="filter-button" type="button" data-filter="ui" role="tab" aria-selected="false">UI Design</button>
+          <button class="filter-button" type="button" data-filter="fullstack" role="tab" aria-selected="false">Fullstack</button>
+          <span class="filter-indicator" aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <div class="project-gallery" aria-live="polite">
+        <article class="gallery-card reveal tilt-gallery" data-category="webapp fullstack">
+          <div class="gallery-image"><img src="Image/gallery/intranet-basica.png" alt="Pantallazo del repositorio Intranet Basica" loading="lazy"></div>
+          <div class="gallery-card-body">
+            <p>Web Apps / Fullstack</p>
+            <h3>Intranet basica</h3>
+            <p>Plataforma PHP orientada a usuarios, foros, mensajes y configuracion interna con estructura modular.</p>
+          </div>
+          <div class="gallery-actions">
+            <a href="https://github.com/ab3leitor/Intranet-b-sica" target="_blank" rel="noreferrer">GitHub <i class="bi bi-github"></i></a>
+          </div>
+        </article>
+
+        <article class="gallery-card reveal tilt-gallery" data-category="landing ui">
+          <div class="gallery-image"><img src="Image/gallery/cafe-bruma.png" alt="Pantallazo del proyecto Cafe Bruma" loading="lazy"></div>
+          <div class="gallery-card-body">
+            <p>Landing Pages / UI Design</p>
+            <h3>Cafe Bruma</h3>
+            <p>Presentacion comercial para cafe de especialidad con estilo editorial, carrito visual y enfoque de marca.</p>
+          </div>
+          <div class="gallery-actions">
+            <a href="https://github.com/ab3leitor/Cafe-Bruma" target="_blank" rel="noreferrer">GitHub <i class="bi bi-github"></i></a>
+          </div>
+        </article>
+
+        <article class="gallery-card reveal tilt-gallery" data-category="landing ui">
+          <div class="gallery-image"><img src="Image/gallery/greenmedical.png" alt="Pantallazo del proyecto GreenMedical" loading="lazy"></div>
+          <div class="gallery-card-body">
+            <p>Landing Pages / UI Design</p>
+            <h3>GreenMedical</h3>
+            <p>Experiencia de marca para laboratorio natural, con hero visual, catalogo y secciones de confianza.</p>
+          </div>
+          <div class="gallery-actions">
+            <a href="https://github.com/ab3leitor/GreenMedical" target="_blank" rel="noreferrer">GitHub <i class="bi bi-github"></i></a>
+          </div>
+        </article>
+
+        <article class="gallery-card reveal tilt-gallery" data-category="landing ui">
+          <div class="gallery-image"><img src="Image/gallery/jm-construcciones.png" alt="Pantallazo del proyecto JM Construcciones" loading="lazy"></div>
+          <div class="gallery-card-body">
+            <p>Landing Pages / UI Design</p>
+            <h3>JM Construcciones</h3>
+            <p>Sitio corporativo para construccion y remodelacion, con fotografia protagonista y llamados comerciales.</p>
+          </div>
+          <div class="gallery-actions">
+            <a href="https://github.com/ab3leitor/JM-Construcciones" target="_blank" rel="noreferrer">GitHub <i class="bi bi-github"></i></a>
+          </div>
+        </article>
+
+        <article class="gallery-card reveal tilt-gallery" data-category="landing">
+          <div class="gallery-image"><img src="Image/gallery/tapiceria-confianza.png" alt="Pantallazo del repositorio Tapiceria de confianza" loading="lazy"></div>
+          <div class="gallery-card-body">
+            <p>Landing Pages</p>
+            <h3>Tapiceria de confianza</h3>
+            <p>Proyecto para modernizar la presencia digital de un negocio de restauracion y fabricacion de muebles tapizados.</p>
+          </div>
+          <div class="gallery-actions">
+            <a href="https://github.com/ab3leitor/Tapiceria-de-confianza" target="_blank" rel="noreferrer">GitHub <i class="bi bi-github"></i></a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="index.html#inicio"><span>&lt;</span>AA<span>/&gt;</span></a><p>Proyectos reales, presentados con movimiento.</p><p>© <span id="year"></span> Abel Arriagada</p></footer>
+</body>
+</html>

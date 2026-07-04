@@ -107,8 +107,50 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => location.href = `mailto:?subject=${subject}&body=${body}`, 450);
   });
 
+  initTypewriter();
   if (!reducedMotion) initParticles();
 });
+
+function initTypewriter() {
+  const target = document.getElementById('typewriterText');
+  if (!target) return;
+
+  const phrases = [
+    'Desarrollo experiencias.',
+    'Creo interfaces vivas.',
+    'Construyo soluciones web.',
+    'Transformo ideas en código.'
+  ];
+
+  let phraseIndex = 0;
+  let letterIndex = phrases[0].length;
+  let removing = true;
+
+  const tick = () => {
+    const phrase = phrases[phraseIndex];
+    target.textContent = phrase.slice(0, letterIndex);
+
+    if (removing) {
+      letterIndex -= 1;
+      if (letterIndex < 0) {
+        removing = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        letterIndex = 0;
+      }
+    } else {
+      letterIndex += 1;
+      if (letterIndex > phrases[phraseIndex].length) {
+        removing = true;
+        setTimeout(tick, 1300);
+        return;
+      }
+    }
+
+    setTimeout(tick, removing ? 42 : 78);
+  };
+
+  setTimeout(tick, 1200);
+}
 
 function initParticles() {
   const canvas = document.getElementById('particleCanvas');
