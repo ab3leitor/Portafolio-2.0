@@ -29,6 +29,8 @@
 .gallery-card:hover{border-color:rgba(85,230,255,.5);background:rgba(85,230,255,.04)}
 .gallery-image{height:250px;overflow:hidden;background:#0d1b2d}
 .gallery-image img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.16,1,.3,1),filter .5s;filter:saturate(.84)}
+.featured-media img.gallery-shot-dashboard,.gallery-image img.gallery-shot-dashboard{object-position:left top}
+.gallery-image img.gallery-shot-tapicero{object-position:left top}
 .gallery-card:hover .gallery-image img{transform:scale(1.08);filter:saturate(1.08)}
 .gallery-card-body{padding:24px 24px 92px}
 .gallery-card-body h3{font:600 1.8rem/1.05 var(--display);letter-spacing:-.04em;margin:10px 0 14px}
