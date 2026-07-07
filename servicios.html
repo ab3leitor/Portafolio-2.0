@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,9 +10,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="css/indexStyle.css">
-  <link rel="stylesheet" href="css/servicios.css">
-  <script src="Js/app.js" defer></script>
+  <link rel="stylesheet" href="css/index-style.css?v=20260707b">
+  <link rel="stylesheet" href="css/servicios.css?v=20260707b">
+  <script src="js/app.js?v=20260707b" defer></script>
 </head>
 <body class="services-page">
   <div class="noise" aria-hidden="true"></div>
@@ -29,6 +29,8 @@
       <a href="#planes">Planes</a>
       <a href="#proceso">Proceso</a>
       <a href="#cotizar" class="nav-cta">Cotizar <i class="bi bi-arrow-up-right"></i></a>
+      <button class="nav-tool" id="themeToggle" type="button" aria-label="Cambiar tema"><i class="bi bi-moon-stars"></i></button>
+      <button class="nav-tool nav-tool-text" id="languageToggle" type="button" aria-label="Cambiar idioma">ES</button>
     </div>
   </nav>
 
@@ -85,33 +87,33 @@
         <p>Los valores finales dependen del contenido, funciones y alcance. Primero conversamos; despues recibes una propuesta clara.</p>
       </div>
       <div class="plans-grid">
-        <article class="plan-card reveal tilt-card">
-          <div class="plan-top"><span>Plan inicio</span><i class="bi bi-window"></i></div>
-          <h3>Landing page</h3>
-          <p class="plan-note">Ideal para presentar un servicio, emprendimiento o campana.</p>
-          <div class="plan-price"><small>Desde</small><strong>$50.000</strong><span>CLP</span></div>
-          <ul><li><i class="bi bi-check2"></i> Pagina principal</li><li><i class="bi bi-check2"></i> Diseno adaptable</li><li><i class="bi bi-check2"></i> Formulario de contacto</li><li><i class="bi bi-check2"></i> Boton de WhatsApp</li><li><i class="bi bi-check2"></i> Publicacion inicial</li></ul>
-          <a class="button button-ghost magnetic" href="#cotizar" data-plan="Landing page">Quiero este plan <i class="bi bi-arrow-right"></i></a>
-        </article>
         <article class="plan-card featured reveal tilt-card">
           <div class="recommended">Mas solicitado</div>
           <div class="plan-top"><span>Plan profesional</span><i class="bi bi-rocket-takeoff"></i></div>
-          <h3>Sitio corporativo</h3>
-          <p class="plan-note">Para negocios que necesitan explicar su oferta y generar confianza.</p>
-          <div class="plan-price"><small>Desde</small><strong>$90.000</strong><span>CLP</span></div>
-          <ul><li><i class="bi bi-check2"></i> Hasta 5 secciones</li><li><i class="bi bi-check2"></i> Galeria o portafolio</li><li><i class="bi bi-check2"></i> Mapa y WhatsApp</li><li><i class="bi bi-check2"></i> SEO basico</li><li><i class="bi bi-check2"></i> Animaciones personalizadas</li></ul>
-          <a class="button button-primary magnetic" href="#cotizar" data-plan="Sitio corporativo">Quiero este plan <i class="bi bi-arrow-right"></i></a>
+          <h3>Landing page business</h3>
+          <p class="plan-note">Pensada para negocios que buscan una presentacion mas completa y enfocada en captar clientes.</p>
+          <div class="plan-price"><small>Desde</small><strong>$200</strong><span>USD</span></div>
+          <ul><li><i class="bi bi-check2"></i> Hasta 6 secciones</li><li><i class="bi bi-check2"></i> Galeria o portafolio</li><li><i class="bi bi-check2"></i> Mapa y WhatsApp</li><li><i class="bi bi-check2"></i> SEO basico</li><li><i class="bi bi-check2"></i> Diseno mas personalizado</li></ul>
+          <a class="button button-primary magnetic" href="#cotizar" data-plan="Landing page business">Quiero este plan <i class="bi bi-arrow-right"></i></a>
         </article>
         <article class="plan-card reveal tilt-card">
-          <div class="plan-top"><span>Plan a medida</span><i class="bi bi-braces-asterisk"></i></div>
-          <h3>Aplicacion web</h3>
-          <p class="plan-note">Cuando tu idea requiere usuarios, datos o procesos propios.</p>
-          <div class="plan-price custom"><small>Valor</small><strong>A medida</strong></div>
-          <ul><li><i class="bi bi-check2"></i> Paneles y formularios</li><li><i class="bi bi-check2"></i> Base de datos</li><li><i class="bi bi-check2"></i> Inicio de sesion</li><li><i class="bi bi-check2"></i> Automatizaciones</li><li><i class="bi bi-check2"></i> Soporte de lanzamiento</li></ul>
-          <a class="button button-ghost magnetic" href="#cotizar" data-plan="Aplicacion web">Conversemos <i class="bi bi-arrow-right"></i></a>
+          <div class="plan-top"><span>Plan premium</span><i class="bi bi-stars"></i></div>
+          <h3>Landing page premium</h3>
+          <p class="plan-note">Para marcas o negocios que quieren una imagen mas solida, moderna y profesional.</p>
+          <div class="plan-price"><small>Desde</small><strong>$250</strong><span>USD</span></div>
+          <ul><li><i class="bi bi-check2"></i> Hasta 8 secciones</li><li><i class="bi bi-check2"></i> Animaciones suaves</li><li><i class="bi bi-check2"></i> Testimonios o FAQ</li><li><i class="bi bi-check2"></i> Optimizacion de imagenes</li><li><i class="bi bi-check2"></i> Soporte inicial</li></ul>
+          <a class="button button-ghost magnetic" href="#cotizar" data-plan="Landing page premium">Quiero este plan <i class="bi bi-arrow-right"></i></a>
+        </article>
+        <article class="plan-card plan-card-soon reveal tilt-card">
+          <div class="plan-top"><span>Proximamente</span><i class="bi bi-buildings"></i></div>
+          <h3>Sitio corporativo</h3>
+          <p class="plan-note">Muy pronto estaran disponibles soluciones mas completas para negocios que necesitan multiples secciones, estructura mas robusta y presencia profesional.</p>
+          <div class="plan-price custom"><small>Estado</small><strong>Coming soon</strong></div>
+          <ul><li><i class="bi bi-check2"></i> Multipagina</li><li><i class="bi bi-check2"></i> Estructura empresarial</li><li><i class="bi bi-check2"></i> Secciones avanzadas</li><li><i class="bi bi-check2"></i> Mayor escalabilidad</li><li><i class="bi bi-check2"></i> Soluciones mas completas</li></ul>
+          <a class="button button-ghost magnetic is-disabled" href="#cotizar" aria-disabled="true" data-plan="Sitio corporativo">Disponible pronto <i class="bi bi-clock"></i></a>
         </article>
       </div>
-      <p class="pricing-disclaimer reveal">Valores referenciales. Dominio, hosting, integraciones de pago y servicios externos se cotizan segun cada proyecto.</p>
+      <p class="pricing-disclaimer reveal">Dominio no incluido · Mantenimiento disponible desde $30/mes</p>
     </section>
 
     <section class="section extras-section">
@@ -152,6 +154,6 @@
 
   <footer><a class="brand" href="index.html"><span>&lt;</span>AA<span>/&gt;</span></a><p>Diseno web profesional, claro y con personalidad.</p><p>© <span id="year"></span> Abel Arriagada</p></footer>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="Js/servicios.js" defer></script>
+  <script src="js/servicios.js?v=20260707b" defer></script>
 </body>
 </html>

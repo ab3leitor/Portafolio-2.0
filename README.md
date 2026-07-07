@@ -1,6 +1,6 @@
 MI PORTAFOLIO | DESARROLLADOR WEB - SITIO WEB OFICIAL
 
-[Imagen de portada: Image/shazam.png (representativa)]
+[Imagen de portada: image/shazam.png (representativa)]
 
 Sitio web de portafolio profesional para desarrollador full stack, diseñado para mostrar habilidades técnicas, proyectos realizados y facilitar el contacto con potenciales clientes o empleadores. Incluye secciones informativas, una interfaz moderna y elementos interactivos como música de fondo y animaciones.
 
@@ -24,7 +24,7 @@ CARACTERÍSTICAS
 TECNOLOGÍAS UTILIZADAS
 
 - HTML5 - Estructura semántica.
-- CSS3 - Estilos personalizados (archivos indexStyle.css y validacion.css).
+- CSS3 - Estilos personalizados (archivos index-style.css y validacion.css).
 - Bootstrap 5 - Framework CSS para componentes y grid.
 - Bootstrap Icons - Iconos vectoriales.
 - JavaScript - Validación de formulario, control de música, efectos de scroll y carrusel.
@@ -35,7 +35,7 @@ ESTRUCTURA DE ARCHIVOS
 /
 ├── index.html                           # Página principal
 ├── css/
-│   ├── indexStyle.css                    # Estilos principales
+│   ├── index-style.css                   # Estilos principales
 │   └── validacion.css                     # Estilos para validación de formulario
 ├── js/
 │   ├── validacion.js                      # Validación del formulario de contacto
@@ -43,7 +43,7 @@ ESTRUCTURA DE ARCHIVOS
 │   ├── musicaFondo.js                      # Control de música de fondo
 │   └── carrousel.js                         # Configuración del carrusel (opcional, puede estar en línea)
 ├── Images/                                 # Carpeta de imágenes
-│   ├── ChatGPT Image 4 abr 2025, 17_29_47.png  # Foto de perfil
+│   ├── portrait-abel.png                       # Foto de perfil
 │   ├── shazam.png                               # Imagen proyecto 1
 │   ├── spotify.png                              # Imagen proyecto 2
 │   └── youtube.png                              # Imagen proyecto 3
